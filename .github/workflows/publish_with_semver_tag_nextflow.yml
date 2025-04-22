@@ -1,0 +1,25 @@
+name: Publish Image Using Semver Tag
+
+on:
+  push:
+    tags:
+      - nextflow-v*
+
+jobs:
+  publish-nextflow:
+    name: Publish Nextflow Image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Extract Version Tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/nextflow-v}" >> $GITHUB_ENV
+      - name: Push the image on the registry
+        uses: Ferlab-Ste-Justine/action-push-image@v2
+        with:
+          username: ${{ secrets.FERLAB_DOCKER_HUB_USER }}
+          password: ${{ secrets.FERLAB_DOCKER_HUB_TOKEN }}
+          image: ferlabcrsj/nextflow
+          location: nextflow
+          dockerfile: nextflow/Dockerfile
+          tag_format: "${{ env.VERSION }}"
