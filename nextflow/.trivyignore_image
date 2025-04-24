@@ -1,0 +1,27 @@
+## DOCKER IMAGE VULNERABILITIES
+
+#  These vulnerabilities come from nextflow dependencies (java).
+#  It will ve very hard to get rid of them, so we tolerate them for now.
+#  We hope reducing the number of vulnerabilities when we update the nextflow version.
+
+
+# logback 1.4.11 │ CVE-2023-6378 │ HIGH |  serialization vulnerability in logback receiver 
+CVE-2023-6378
+
+# apache-commons-io >=2.0 and <2.14.0 │ CVE-2024-47554 │ HIGH │ Possible denial of service attack on untrusted input to XmlStreamReader
+CVE-2024-47554
+
+# apache-ivy < 2.5.0 | CVE-2022-46751 │ HIGH │ XML External Entity vulnerability
+CVE-2022-46751 
+
+# jgit <= 6.6.0 │ CVE-2023-4759 │ HIGH │ arbitrary file overwrite
+CVE-2023-4759
+
+# pf4j <= v.3.9.0 │ CVE-2023-40826 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the zippluginPath parameter
+CVE-2023-40826 
+
+# pf4j <= v.3.9.0 │ CVE-2023-40827 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the loadpluginPath parameter
+CVE-2023-40827
+
+# pf4j <= v.3.9.0 │ CVE-2023-40828 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the expandIfZip method in the extract function
+CVE-2023-40828
