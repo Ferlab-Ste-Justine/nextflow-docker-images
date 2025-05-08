@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v3.0.0 - 2025-05-08
+
 ### `Added`
 - [#6](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/6) Copy nextflow docker image from Post-processing-Pipeline repo (v2.8.1)
 
