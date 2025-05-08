@@ -1,27 +1,56 @@
-## DOCKER IMAGE VULNERABILITIES
+# This file is used to ignore vulnerabilities in the docker image
 
-#  These vulnerabilities come from nextflow dependencies (java).
-#  It will ve very hard to get rid of them, so we tolerate them for now.
-#  We hope reducing the number of vulnerabilities when we update the nextflow version.
+##############################################################################
+#  VULNERABILITIES FROM THE ROOT DOCKER IMAGE: amazoncorretto:21-al2023      #
+#                                                                            #
+#  These would be hard to fix, as they are part of the base image used by    #
+#  the nextflow docker image that we depend on. We will ignore them for now. #
+#                                                                            #
+##############################################################################
 
+# java-21-amazon-corretto  < 1:21.0.7+6-1 | CVE-2025-21587 | HIGH | openjdk: Better TLS connection support (Oracle CPU 2025-04)
+CVE-2025-21587
 
-# logback 1.4.11 │ CVE-2023-6378 │ HIGH |  serialization vulnerability in logback receiver 
-CVE-2023-6378
+# java-21-amazon-corretto  < 1:21.0.7+6-1 | CVE-2025-30691 | HIGH | openjdk: Improve compiler transformations (Oracle CPU 2025-04)
+CVE-2025-30691
+
+# java-21-amazon-corretto  < 1:21.0.7+6-1 | CVE-2025-30698 | HIGH |  openjdk: Enhance Buffered Image handling (Oracle CPU 2025-04)
+CVE-2025-30698
+
+# libcap  < 2.48-2.amzn2023.0.4 | CVE-2025-1390 | HIGH | libcap: pam_cap: Fix potential configuration parsing error
+CVE-2025-1390
+
+# libxml2 < 2.10.4-1.amzn2023.0.9 | CVE-2024-56171 | HIGH | libxml2: Use-After-Free in libxml2
+CVE-2024-56171
+
+# libxml2 < 2.10.4-1.amzn2023.0.9 | CVE-2025-24928 | HIGH | libxml2: Stack-based buffer overflow in xmlSnprintfElements of libxml2
+CVE-2025-24928
+
+# libxml2 < 2.10.4-1.amzn2023.0.9 |  CVE-2025-27113 | HIGH | libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch
+CVE-2025-27113
+
+#############################################################
+# VULNERABILITIES FROM NEXTFLOW DEPENDENCIES (JAVA)         #
+#                                                           #
+# These are vulnerabilities in the java libraries used by   #
+# nextflow. We will ignore them for now.                    #
+#############################################################
 
 # apache-commons-io >=2.0 and <2.14.0 │ CVE-2024-47554 │ HIGH │ Possible denial of service attack on untrusted input to XmlStreamReader
 CVE-2024-47554
 
-# apache-ivy < 2.5.0 | CVE-2022-46751 │ HIGH │ XML External Entity vulnerability
-CVE-2022-46751 
+########################################################
+# VULNERABILITIES FROM INSTALLED TOOLS (BINARY)        #
+#                                                      #
+# These are vulnerabilities in the tools installed     #
+# on top of the nextflow image.                        #
+#                                                      #
+# We think that there is low risk of exposure because  #
+# these tools are not part of an automated process or  #
+# external-facing service. They are only used manually #
+# by trusted users.                                    #
+#                                                      #
+########################################################
 
-# jgit <= 6.6.0 │ CVE-2023-4759 │ HIGH │ arbitrary file overwrite
-CVE-2023-4759
-
-# pf4j <= v.3.9.0 │ CVE-2023-40826 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the zippluginPath parameter
-CVE-2023-40826 
-
-# pf4j <= v.3.9.0 │ CVE-2023-40827 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the loadpluginPath parameter
-CVE-2023-40827
-
-# pf4j <= v.3.9.0 │ CVE-2023-40828 │ HIGH │ allows a remote attacker to obtain sensitive information and execute arbitrary code via the expandIfZip method in the extract function
-CVE-2023-40828
+# rclone, github.com/golang-jwt/jwt/v5 <5.2.2 | CVE-2025-30204 | HIGH | golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing
+CVE-2025-30204

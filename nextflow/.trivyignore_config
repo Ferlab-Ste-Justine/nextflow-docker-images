@@ -2,6 +2,3 @@
 
 # AVD-DS-0002 | HIGH | Specify at least 1 USER command in Dockerfile with non-root user as argument
 AVD-DS-0002
-
-# AVD-DS-0015 | HIGH |'yum clean all' is missed
-AVD-DS-0015
