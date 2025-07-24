@@ -12,6 +12,8 @@ wget-1.21.3-1.amzn2023.0.4.x86_64 \
 unzip-6.0-57.amzn2023.0.2.x86_64 \
 zip-3.0-28.amzn2023.0.2.x86_64 \
 awscli-2-2.17.18-1.amzn2023.0.1 \
+#gzip-1.12-1.amzn2023.0.1.x86_64 \
+#vim-enhanced-2:9.1.785-1.amzn2023.0.1.x86_64 \
 && yum clean all
 
 RUN curl "https://downloads.rclone.org/v1.69.2/rclone-v1.69.2-linux-amd64.zip" -o "rclone.zip" && \

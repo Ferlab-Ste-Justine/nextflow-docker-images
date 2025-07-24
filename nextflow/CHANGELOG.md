@@ -5,6 +5,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### `Added`
+- [#9](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/9) Add gzip and vim to nextflow docker image
+
 ## v3.0.0 - 2025-05-08
 
 ### `Added`
