@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Added`
 
-- [#10](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/10) Update trivu warnings and rclone version
+- [#10](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/10) Update trivy warnings and rclone version
+- [#11](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/11) Add gzip and vim tools
 
 ## v3.0.0 - 2025-05-08
 
