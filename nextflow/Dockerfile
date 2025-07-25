@@ -14,7 +14,7 @@ zip-3.0-28.amzn2023.0.2.x86_64 \
 awscli-2-2.17.18-1.amzn2023.0.1 \
 && yum clean all
 
-RUN curl "https://downloads.rclone.org/v1.69.2/rclone-v1.69.2-linux-amd64.zip" -o "rclone.zip" && \
+RUN curl "https://downloads.rclone.org/v1.70.3/rclone-v1.70.3-linux-amd64.zip" -o "rclone.zip" && \
     unzip rclone.zip && \
-    cp rclone-v1.69.2-linux-amd64/rclone /usr/local/bin/rclone && \
-    rm -rf rclone-v1.69.2-linux-amd64 rclone.zip
+    cp rclone-v1.70.3-linux-amd64/rclone /usr/local/bin/rclone && \
+    rm -rf rclone-v1.70.3-linux-amd64 rclone.zip
