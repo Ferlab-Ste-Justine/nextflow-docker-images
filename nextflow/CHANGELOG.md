@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## v3.1.0 - 2025-07-25
+
 ### `Added`
 
 - [#10](https://github.com/Ferlab-Ste-Justine/nextflow-docker-images/pull/10) Update trivy warnings and rclone version
