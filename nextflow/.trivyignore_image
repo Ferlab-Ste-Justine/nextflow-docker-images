@@ -1,12 +1,23 @@
 # This file is used to ignore vulnerabilities in the docker image
 
+
 ##############################################################################
-#  VULNERABILITIES FROM THE ROOT DOCKER IMAGE: amazoncorretto:21-al2023      #
+#  VULNERABILITIES FROM THE BASE DOCKER IMAGE: nextflow/nextflow:24.10.5     #
 #                                                                            #
-#  These would be hard to fix, as they are part of the base image used by    #
-#  the nextflow docker image that we depend on. We will ignore them for now. #
+#  These would be hard to fix, as they are part of the base nextflow image   #
+#  We will ignore them for now.                                              #
 #                                                                            #
 ##############################################################################
+
+
+# glib2 < 2.82.2-766.amzn2023 │ CVE-2025-3360  │ HIGH │ glibc: GLib prior to 2.82.5 is vulnerable to integer overflow
+CVE-2025-3360
+
+# glib2 < 2.82.2-766.amzn2023 │ CVE-2025-6052  │ HIGH │ glib: Integer overflow in g_string_maybe_expand() leading to potential buffer overflow
+CVE-2025-6052
+
+# glibc, glibc-common, glibc-minimal-langpack < 2.34-196.amzn2023.0.1 │ CVE-2025-4802 │ HIGH │ glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH
+CVE-2025-4802
 
 # java-21-amazon-corretto  < 1:21.0.7+6-1 | CVE-2025-21587 | HIGH | openjdk: Better TLS connection support (Oracle CPU 2025-04)
 CVE-2025-21587
@@ -16,6 +27,10 @@ CVE-2025-30691
 
 # java-21-amazon-corretto  < 1:21.0.7+6-1 | CVE-2025-30698 | HIGH |  openjdk: Enhance Buffered Image handling (Oracle CPU 2025-04)
 CVE-2025-30698
+
+
+# libarchive < 3.7.4-2.amzn2023.0.2 │ CVE-2025-5914 │ HIGH │ libarchive: Double free at archive_read_format_rar_seek_data()
+CVE-2025-5914
 
 # libcap  < 2.48-2.amzn2023.0.4 | CVE-2025-1390 | HIGH | libcap: pam_cap: Fix potential configuration parsing error
 CVE-2025-1390
@@ -28,6 +43,30 @@ CVE-2025-24928
 
 # libxml2 < 2.10.4-1.amzn2023.0.9 |  CVE-2025-27113 | HIGH | libxml2: NULL Pointer Dereference in libxml2 xmlPatMatch
 CVE-2025-27113
+
+# libxml2 < 2.10.4-1.amzn2023.0.9 | CVE-2025-6021| HIGH | libxml2: Integer Overflow in xmlBuildQName()
+CVE-2025-6021
+
+# python3 <  3.9.23-1.amzn2023.0.1  │ CVE-2024-12718 │ HIGH │ cpython: python: Bypass extraction filter to modify file metadata outside extraction directory
+CVE-2024-12718
+
+# python3 <  3.9.23-1.amzn2023.0.1  │ CVE-2025-4138  │ HIGH │ cpython: python: Bypassing extraction filter to create symlinks to arbitrary targets outside the extraction directory
+CVE-2025-4138
+
+# python3 <  3.9.23-1.amzn2023.0.1  │ CVE-2025-4330  │ HIGH │ cpython: python: Extraction filter bypass for linking outside extraction directory
+CVE-2025-4330
+
+# python3 <  3.9.23-1.amzn2023.0.1  │ CVE-2025-4435  │ HIGH │ cpython: Tarfile extracts filtered members when errorlevel=0
+CVE-2025-4435
+
+# python3, python3-libs < 3.9.23-1.amzn2023.0.1  │ CVE-2025-4517  │ HIGH │ python: cpython: Arbitrary writes via tarfile realpath
+CVE-2025-4517
+
+# python3-setuptools, python3-setuptools-wheel < 59.6.0-2.amzn2023.0.5 │ CVE-2025-47273 │ HIGH │ setuptools: Path Traversal Vulnerability in setuptools PackageIndex
+CVE-2025-47273
+
+# sqlite-libs <  3.40.0-1.amzn2023.0.5 │ CVE-2022-46908 │ HIGH │ sqlite: safe mode authorizer callback allows disallowed UDFs
+CVE-2022-46908
 
 #############################################################
 # VULNERABILITIES FROM NEXTFLOW DEPENDENCIES (JAVA)         #
@@ -52,5 +91,5 @@ CVE-2024-47554
 #                                                      #
 ########################################################
 
-# rclone, github.com/golang-jwt/jwt/v5 <5.2.2 | CVE-2025-30204 | HIGH | golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing
-CVE-2025-30204
+# awscli, perl < 5.74-477.amzn2023.0.7 | CVE-2025-40909 | HIGH | perl: Perl threads have a working directory race condition
+CVE-2025-40909
