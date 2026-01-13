@@ -10,6 +10,9 @@ This docker image is designed to create long-running Nextflow pods. It includes 
 utilities such as the AWS CLI and Rclone. Additionally, it provides more basic linux commands like tar, which are 
 not included in the base nextflow image.
 
+### BCFtools
+This docker image is designed to represent BCFtools with the addition of having FUSE (specifically the `fusermount` binary) available to mount the Fusion filesystem.
+
 
 ## Local Testing Commands
 

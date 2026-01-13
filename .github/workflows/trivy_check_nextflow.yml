@@ -1,4 +1,4 @@
-name: Security Scan with Trivy
+name: Security Scan with Trivy (nextflow)
 
 on:
   pull_request:

@@ -1,4 +1,4 @@
-name: Publish Image Using latest (nextflow)
+name: Publish Image Using latest (bcftools)
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  publish-nextflow:
-    name: Publish Nextflow Image latest
+  publish-bcftools:
+    name: Publish BCFtools Image latest
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
         with:
           username: ${{ secrets.FERLAB_DOCKER_HUB_USER }}
           password: ${{ secrets.FERLAB_DOCKER_HUB_TOKEN }}
-          image: ferlabcrsj/nextflow
-          location: nextflow
-          dockerfile: nextflow/Dockerfile
+          image: ferlabcrsj/bcftools
+          location: bcftools
+          dockerfile: bcftools/Dockerfile
           tag_format: "latest"
